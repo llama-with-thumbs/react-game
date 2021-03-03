@@ -1,0 +1,171 @@
+html, body {
+    height: 100%;
+    background-color: #CFD0CF;
+}
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    color: #434344;
+
+    min-width: 900px;
+    min-height: 600px;
+    max-height: 900px;
+
+    
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+}
+
+.game-name {
+    font-size: 42px;
+    line-height: 47px;
+    margin: 40px;
+}
+.game-frame {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 25px;
+    grid-row-gap: 25px;
+
+}
+.emoji-card {
+    background-color: transparent;
+    width: 130px;
+    height: 130px;
+    cursor: pointer;
+    perspective: 600px;
+}
+  
+  .emoji-card__frame {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform .5s;
+    transform-style: preserve-3d;
+  }
+  
+  .flipped {
+    transform: rotateY(180deg);
+  }
+  
+  .emoji-card__face, .emoji-card__back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    box-sizing: border-box;
+
+    border: solid white 5px;
+    border-radius: 9px;
+    box-shadow: 1px 1px 5px 0px rgba(0,0,0,0.5);
+  }
+  
+  .emoji-card__face {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 75px;
+    background-color: white;
+    transform: rotateY(180deg);
+    
+  }
+  .emoji-card__face::selection {
+    color: none;
+    background: none;
+}
+/* For Mozilla Firefox */
+  .emoji-card__face::-moz-selection {
+    color: none;
+    background: none;
+}
+  
+  .emoji-card__back {
+    background: linear-gradient(45deg, #22AB93, #19668D);
+  }
+
+  .ripple {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    border: 2px solid black;
+    box-shadow: 0px 0px 0px 1px white,
+                inset 0px 0px 0px 1px white;
+    position: absolute;
+    display: none;
+    cursor: pointer;
+
+  }
+
+  .ripple.active {
+    display: block;
+    animation: ripple .3s ease-out forwards;
+  }
+
+  @keyframes ripple {
+    80%{ opacity: 80%;}
+    100%{ opacity: 0;}
+  }
+
+.timer {
+  margin: 30px 0 0 0;
+  line-height: 36px;
+  font-size: 32px;
+}
+
+.fullScreenBlock {
+  width: 100%;
+  height: 100%;
+  position:absolute;
+  background-color:rgba(0, 0, 0, 0.3);
+  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.notice {
+  background-color: white;
+  min-width: 350px;
+  text-align: center;
+}
+
+.restartButton {
+  height: 40px;
+  margin-bottom: 30px;
+  padding: 0 30px;
+  line-height: 40px;
+  font-size: 20px;
+  border: 0px;
+  border: none;
+  border-radius: 9px;
+  color: white;
+  box-shadow: 1px 1px 1px 0px rgba(0,0,0,0.75);
+  background: linear-gradient(90deg, #19668D, #22AB93) ;
+  outline: none;
+}
+
+.restartButton:active {
+  box-shadow: inset 2px 1px 10px 0px rgba(0,0,0,0.75);
+}
+
+.result {
+  font-size: 48px;
+  margin: 30px 0 40px 0;
+}
+
+.jump {
+  display: inline-block;
+  animation-name: jump;
+  animation-duration: 0.5s;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
+}
+
+@keyframes jump {
+
+  to {transform: scaleY(1.3) translate(0px, -10px);}
+}

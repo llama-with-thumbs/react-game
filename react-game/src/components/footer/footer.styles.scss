@@ -1,0 +1,33 @@
+.footer {
+    height: 70px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+
+    .year {
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .links {
+      height: 100%;
+      display: flex;
+      align-items: center;
+
+      .resource {
+        padding: 10px 15px;
+        cursor: pointer;
+        text-align: center;
+
+        
+        .logo {
+          height: 25px;
+          max-width: 60px;
+          margin: 0 10px;
+          vertical-align: middle;
+        }
+      }
+    }
+  }

@@ -1,0 +1,23 @@
+.info-table {
+    display: flex;
+    flex-direction: column;
+    padding: 0 20px;
+
+    .info-table__first-line{
+        display: flex;
+        flex-direction: row;
+        
+        *{
+            margin: 0 10px;
+            text-align: center;
+        }
+    }
+
+    .line-seporator{
+        width: 100%;
+    }
+
+    .stopwatch {
+        align-self: center;
+    }
+}

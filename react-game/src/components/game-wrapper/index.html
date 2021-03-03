@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>Memoji</title>
+
+    <link rel="stylesheet" href="index.css">
+</head>
+<body class="body" id="body">
+
+    <h1 class="game-name">Memoji</h1>
+
+    <section class="game-frame" id="game-frame">
+        <div class="emoji-card" id="emoji-card">
+            <div class="emoji-card__frame" id="emoji-card__frame">
+                <div class="emoji-card__face" id="emoji-card__face"></div>
+                <div class="emoji-card__back" id="emoji-card__back"></div>
+            </div>
+        </div>
+    </section> 
+    
+    
+    <script src="./script.js"></script>
+    <script>
+        // flip('game-frame');
+        // multiplyCards('emoji-card', 'game-frame', 11);
+        // populateCards('emoji-card__face', ["🐶","🐱","🐭","🐹","🐰","🐻","🐼","🐨","🐯","🦁","🐮","🐷","🐸","🐙","🐵","🦄","🐞","🦀","🐟","🐊","🐓","🦃","🐿"]);
+        setGame('game-frame', 'emoji-card__face', 12, ["🐶","🐱","🐭","🐹","🐰","🐻","🐼","🐨","🐯","🦁","🐮","🐷","🐸","🐙","🐵","🦄","🐞","🦀","🐟","🐊","🐓","🦃","🐿"]);
+    </script>
+</body>
+</html>
